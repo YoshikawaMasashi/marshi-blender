@@ -333,15 +333,16 @@ class MarshiMenu(bpy.types.Menu):
         if context.mode == "EDIT_MESH":
             layout.operator(SquareSkin.bl_idname)
             layout.operator(CircleSkin.bl_idname)
-        elif context.mode == "OBJECT":
-            layout.operator(eevee360.Eevee360.bl_idname)
-
 
 classes = [
     SquareSkin,
     CircleSkin,
-    eevee360.Eevee360,
     MarshiMenu,
+
+    # eevee360
+    eevee360.Eevee360Render,
+    eevee360.Eevee360AnimationRender,
+    eevee360.Eevee360Panel,
 ]
 
 addon_keymaps = []
